@@ -1,0 +1,11 @@
+# Replace this line with your custom domain when ready.
+# Example: itstudioslon.ru
+# Or: www.itstudioslon.ru
+#
+# After adding your domain here, go to your DNS provider and add:
+#   CNAME  www  itstudioslon.github.io
+# Or for apex domain add A records:
+#   A  @  185.199.108.153
+#   A  @  185.199.109.153
+#   A  @  185.199.110.153
+#   A  @  185.199.111.153
