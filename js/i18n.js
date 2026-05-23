@@ -1,0 +1,86 @@
+const translations = {
+  ru: {
+    "nav.services": "Услуги",
+    "nav.about": "О нас",
+    "nav.contact": "Контакты",
+    "hero.eyebrow": "Мобильная разработка",
+    "hero.title": "Приложения,<br>которые работают<br><span class=\"accent\">идеально</span>",
+    "hero.sub": "iOS · iPadOS · macOS · Android",
+    "hero.cta": "Обсудить проект",
+    "services.title": "Что мы делаем",
+    "services.ios.title": "iOS & iPadOS",
+    "services.ios.desc": "Нативные приложения на Swift. Чистый код, Human Interface Guidelines, App Store.",
+    "services.macos.title": "macOS",
+    "services.macos.desc": "Приложения для Mac. Интеграция с экосистемой Apple — Handoff, iCloud, универсальные приложения.",
+    "services.android.title": "Android",
+    "services.android.desc": "Kotlin, Jetpack Compose, Material Design. Полноценные приложения для Google Play.",
+    "services.cross.title": "Кроссплатформа",
+    "services.cross.desc": "Flutter и SwiftUI для охвата всех платформ с единой кодовой базой.",
+    "services.backend.title": "Backend & API",
+    "services.backend.desc": "REST API, CloudKit, Firebase. Полный стек — от идеи до работающего продукта.",
+    "services.support.title": "Поддержка",
+    "services.support.desc": "Сопровождение, обновления под новые версии ОС, консультации и доработки.",
+    "about.title": "О студии",
+    "about.p1": "АйТи Студия СЛОН — это команда с фокусом на качество и детали. Мы специализируемся на экосистеме Apple: iPhone, iPad, Mac. Каждое приложение — это продуманный продукт, а не просто набор функций.",
+    "about.p2": "Работаем с малым бизнесом, стартапами и частными клиентами. Ценим прозрачность: чёткие сроки, понятные этапы, живое общение.",
+    "about.v1": "Нативный подход",
+    "about.v2": "Честные сроки",
+    "about.v3": "Долгосрочная поддержка",
+    "about.tagline": "Живи в цифре!",
+    "contact.title": "Контакты",
+    "contact.sub": "Готовы обсудить ваш проект? Напишите нам в Telegram — ответим быстро.",
+    "legal.inn": "ИНН:",
+    "legal.name": "ИП СОТНИКОВ ДМИТРИЙ ПЕТРОВИЧ",
+    "footer.name": "ИП СОТНИКОВ ДМИТРИЙ ПЕТРОВИЧ",
+    "lang.toggle": "EN",
+    "page.title": "АйТи Студия СЛОН — Живи в цифре!",
+    "page.desc": "Разработка мобильных приложений для iOS, iPadOS, macOS и Android. АйТи Студия СЛОН."
+  },
+  en: {
+    "nav.services": "Services",
+    "nav.about": "About",
+    "nav.contact": "Contact",
+    "hero.eyebrow": "Mobile Development",
+    "hero.title": "Apps that<br>simply<br><span class=\"accent\">work</span>",
+    "hero.sub": "iOS · iPadOS · macOS · Android",
+    "hero.cta": "Start a project",
+    "services.title": "What we do",
+    "services.ios.title": "iOS & iPadOS",
+    "services.ios.desc": "Native Swift apps. Clean code, Human Interface Guidelines, App Store ready.",
+    "services.macos.title": "macOS",
+    "services.macos.desc": "Mac apps with deep Apple ecosystem integration — Handoff, iCloud, Universal apps.",
+    "services.android.title": "Android",
+    "services.android.desc": "Kotlin, Jetpack Compose, Material Design. Full-featured apps for Google Play.",
+    "services.cross.title": "Cross-platform",
+    "services.cross.desc": "Flutter and SwiftUI to cover all platforms with a single codebase.",
+    "services.backend.title": "Backend & API",
+    "services.backend.desc": "REST API, CloudKit, Firebase. Full stack — from idea to working product.",
+    "services.support.title": "Support",
+    "services.support.desc": "Maintenance, OS updates compatibility, consulting and improvements.",
+    "about.title": "About the studio",
+    "about.p1": "IT Studio Slon is a team focused on quality and details. We specialize in the Apple ecosystem: iPhone, iPad, Mac. Every app is a thoughtful product, not just a set of features.",
+    "about.p2": "We work with small businesses, startups, and individual clients. We value transparency: clear timelines, understandable milestones, direct communication.",
+    "about.v1": "Native approach",
+    "about.v2": "Honest deadlines",
+    "about.v3": "Long-term support",
+    "about.tagline": "Live in digital!",
+    "contact.title": "Contact",
+    "contact.sub": "Ready to discuss your project? Write to us on Telegram — we'll reply quickly.",
+    "legal.inn": "TIN:",
+    "legal.name": "SOTNIKOV DMITRII PETROVICH IP",
+    "footer.name": "SOTNIKOV DMITRII PETROVICH IP",
+    "lang.toggle": "RU",
+    "page.title": "IT Studio Slon — Live in digital!",
+    "page.desc": "Mobile app development for iOS, iPadOS, macOS and Android. IT Studio Slon."
+  }
+};
+
+// Logo alt text per language (ready for future EN logo)
+const logoAssets = {
+  ru: { src: "assets/logo.jpg", alt: "АйТи Студия СЛОН" },
+  en: { src: "assets/logo.jpg", alt: "IT Studio Slon" }
+  // To add an English logo later, change en.src to "assets/logo-en.jpg"
+};
+
+window.translations = translations;
+window.logoAssets = logoAssets;
