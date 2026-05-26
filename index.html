@@ -1,1 +1,205 @@
-        <img src="assets/logo.jpg" alt="IT Studio Slon" class="about__logo" id="aboutLogoImg" />
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>АйТи Студия СЛОН — Живи в цифре!</title>
+  <meta name="description" content="Разработка мобильных приложений для iOS, iPadOS, macOS и Android. АйТи Студия СЛОН." />
+  <meta property="og:title" content="АйТи Студия СЛОН" />
+  <meta property="og:description" content="Разработка мобильных приложений для Apple и Android" />
+  <meta property="og:image" content="assets/logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('slon-theme') ||
+              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="assets/logo.jpg" alt="IT Studio Slon" class="logo__img" id="logoImg" />
+      </a>
+      <div class="header__brand" id="headerBrand">IT Studio SLON</div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="siteNav">
+        <a href="#services" class="nav__link" data-i18n="nav.services">Услуги</a>
+        <a href="#about" class="nav__link" data-i18n="nav.about">О нас</a>
+        <a href="#contact" class="nav__link" data-i18n="nav.contact">Контакты</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Мобильная разработка</p>
+        <h1 class="hero__title" data-i18n="hero.title">Приложения,<br>которые работают<br><span class="accent">идеально</span></h1>
+        <p class="hero__sub" data-i18n="hero.sub">iOS · iPadOS · macOS · Android</p>
+        <a href="#contact" class="btn btn--primary" data-i18n="hero.cta">Обсудить проект</a>
+      </div>
+      <div class="hero__visual">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="app-icon" style="--c:#3BAFAD">
+              <svg viewBox="0 0 40 40" fill="none"><path d="M8 32 C8 20 16 12 20 8 C24 12 32 20 32 32" stroke="white" stroke-width="3" stroke-linecap="round"/><ellipse cx="20" cy="32" rx="8" ry="3" fill="white" opacity=".3"/></svg>
+            </div>
+            <div class="app-icon" style="--c:#2D7D9A">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="10" height="10" rx="2" fill="white"/><rect x="22" y="8" width="10" height="10" rx="2" fill="white" opacity=".6"/><rect x="8" y="22" width="10" height="10" rx="2" fill="white" opacity=".6"/><rect x="22" y="22" width="10" height="10" rx="2" fill="white" opacity=".3"/></svg>
+            </div>
+            <div class="app-icon" style="--c:#1B4F72">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="7" stroke="white" stroke-width="3"/><path d="M8 34 C8 26 32 26 32 34" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="bars">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="platform-badges">
+          <span class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            iOS / macOS
+          </span>
+          <span class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.523 15.341a.847.847 0 0 1-.845.845.847.847 0 0 1-.845-.845.847.847 0 0 1 .845-.845.847.847 0 0 1 .845.845m-10.201 0a.847.847 0 0 1-.845.845.847.847 0 0 1-.845-.845.847.847 0 0 1 .845-.845.847.847 0 0 1 .845.845M17.69 9.001l1.637-2.836a.341.341 0 0 0-.125-.465.341.341 0 0 0-.464.124l-1.657 2.869A10.247 10.247 0 0 0 12.919 8a10.247 10.247 0 0 0-4.162.693L7.1 5.824a.341.341 0 0 0-.464-.124.341.341 0 0 0-.125.465L8.148 9a9.98 9.98 0 0 0-5.648 8.83h15.84A9.98 9.98 0 0 0 17.69 9z"/></svg>
+            Android
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section__title" data-i18n="services.title">Что мы делаем</h2>
+      <div class="cards">
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="14" y="4" width="20" height="40" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="39" r="2" fill="currentColor"/><line x1="19" y1="9" x2="29" y2="9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="services.ios.title">iOS & iPadOS</h3>
+          <p data-i18n="services.ios.desc">Нативные приложения на Swift. Чистый код, Human Interface Guidelines, App Store.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="12" width="32" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M17 38h14M24 34v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="services.macos.title">macOS</h3>
+          <p data-i18n="services.macos.desc">Приложения для Mac. Интеграция с экосистемой Apple — Handoff, iCloud, универсальные приложения.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6l3 7h8l-6 5 2 8-7-4-7 4 2-8-6-5h8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 28v14M17 36l7 6 7-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="services.android.title">Android</h3>
+          <p data-i18n="services.android.desc">Kotlin, Jetpack Compose, Material Design. Полноценные приложения для Google Play.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><path d="M24 8c0 0-8 6-8 16s8 16 8 16M24 8c0 0 8 6 8 16s-8 16-8 16M8 24h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="services.cross.title">Кроссплатформа</h3>
+          <p data-i18n="services.cross.desc">Flutter и SwiftUI для охвата всех платформ с единой кодовой базой.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M6 36l10-10 8 8 8-12 10 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="8" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <h3 data-i18n="services.backend.title">Backend & API</h3>
+          <p data-i18n="services.backend.desc">REST API, CloudKit, Firebase. Полный стек — от идеи до работающего продукта.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 10v4M24 34v4M10 24h4M34 24h4M15 15l3 3M30 30l3 3M15 33l3-3M30 18l3-3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <h3 data-i18n="services.support.title">Поддержка</h3>
+          <p data-i18n="services.support.desc">Сопровождение, обновления под новые версии ОС, консультации и доработки.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--alt" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <h2 class="section__title" data-i18n="about.title">О студии</h2>
+        <p data-i18n="about.p1">АйТи Студия СЛОН — это команда с фокусом на качество и детали. Мы специализируемся на экосистеме Apple: iPhone, iPad, Mac. Каждое приложение — продуманный продукт, а не набор функций.</p>
+        <p data-i18n="about.p2">Работаем с малым бизнесом, стартапами и частными клиентами. Ценим прозрачность: чёткие сроки, понятные этапы, прямое общение.</p>
+        <div class="about__values">
+          <div class="value"><span class="value__num">01</span><span data-i18n="about.v1">Нативный подход</span></div>
+          <div class="value"><span class="value__num">02</span><span data-i18n="about.v2">Честные сроки</span></div>
+          <div class="value"><span class="value__num">03</span><span data-i18n="about.v3">Долгосрочная поддержка</span></div>
+        </div>
+      </div>
+      <div class="about__logo-wrap">
+        <img src="assets/logo.jpg" alt="АйТи Студия СЛОН" class="about__logo" id="aboutLogoImg" />
+        <p class="about__tagline" data-i18n="about.tagline">Живи в цифре!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact__inner">
+      <h2 class="section__title" data-i18n="contact.title">Контакты</h2>
+      <p class="contact__sub" data-i18n="contact.sub">Готовы обсудить ваш проект? Напишите нам в Telegram — ответим быстро.</p>
+      <a href="https://t.me/dzmitrysotnikov" target="_blank" rel="noopener" class="btn btn--tg">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.667l-2.95-.924c-.64-.203-.658-.64.135-.954l11.57-4.461c.537-.194 1.006.131.969.893z"/></svg>
+        @dzmitrysotnikov
+      </a>
+
+      <div class="legal">
+        <p class="legal__name" id="legalName">ИП СОТНИКОВ ДМИТРИЙ ПЕТРОВИЧ</p>
+        <p class="legal__inn"><span data-i18n="legal.inn">ИНН:</span> 745311916054</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span id="footerName">ИП СОТНИКОВ ДМИТРИЙ ПЕТРОВИЧ</span>
+      <span>ИНН 745311916054</span>
+      <span>
+        <a href="https://t.me/dzmitrysotnikov" target="_blank" rel="noopener">Telegram</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
