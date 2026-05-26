@@ -9,13 +9,13 @@ const translations = {
     "hero.cta": "Обсудить проект",
     "services.title": "Что мы делаем",
     "services.ios.title": "iOS & iPadOS",
-    "services.ios.desc": "Нативные приложения на Swift. Чистый код, Human Interface Guidelines, App Store.",
+    "services.ios.desc": "Нативные приложения на Swift/SwiftUI. Чистый код, Human Interface Guidelines, App Store.",
     "services.macos.title": "macOS",
     "services.macos.desc": "Приложения для Mac. Интеграция с экосистемой Apple — Handoff, iCloud, универсальные приложения.",
     "services.android.title": "Android",
     "services.android.desc": "Kotlin, Jetpack Compose, Material Design. Полноценные приложения для Google Play.",
     "services.cross.title": "Кроссплатформа",
-    "services.cross.desc": "Flutter и SwiftUI для охвата всех платформ с единой кодовой базой.",
+    "services.cross.desc": "Различные решения для охвата всех платформ с единой кодовой базой.",
     "services.backend.title": "Backend & API",
     "services.backend.desc": "REST API, CloudKit, Firebase. Полный стек — от идеи до работающего продукта.",
     "services.support.title": "Поддержка",
@@ -46,19 +46,19 @@ const translations = {
     "hero.cta": "Start a project",
     "services.title": "What we do",
     "services.ios.title": "iOS & iPadOS",
-    "services.ios.desc": "Native Swift apps. Clean code, Human Interface Guidelines, App Store ready.",
+    "services.ios.desc": "Native Swift/SwiftUI apps. Clean code, Human Interface Guidelines, App Store ready.",
     "services.macos.title": "macOS",
     "services.macos.desc": "Mac apps with deep Apple ecosystem integration — Handoff, iCloud, Universal apps.",
     "services.android.title": "Android",
     "services.android.desc": "Kotlin, Jetpack Compose, Material Design. Full-featured apps for Google Play.",
     "services.cross.title": "Cross-platform",
-    "services.cross.desc": "Flutter and SwiftUI to cover all platforms with a single codebase.",
+    "services.cross.desc": "Different architectures to cover all platforms with a single codebase.",
     "services.backend.title": "Backend & API",
     "services.backend.desc": "REST API, CloudKit, Firebase. Full stack — from idea to working product.",
     "services.support.title": "Support",
     "services.support.desc": "Maintenance, OS updates compatibility, consulting and improvements.",
     "about.title": "About the studio",
-    "about.p1": "IT Studio Slon is a team focused on quality and details. We specialize in the Apple ecosystem: iPhone, iPad, Mac. Every app is a thoughtful product, not just a set of features.",
+    "about.p1": "IT Studio SLON is a team focused on quality and details. We specialize in the Apple ecosystem: iPhone, iPad, Mac. Every app is a thoughtful product, not just a set of features.",
     "about.p2": "We work with small businesses, startups, and individual clients. We value transparency: clear timelines, understandable milestones, direct communication.",
     "about.v1": "Native approach",
     "about.v2": "Honest deadlines",
@@ -70,15 +70,15 @@ const translations = {
     "legal.name": "SOTNIKOV DMITRII PETROVICH IP",
     "footer.name": "SOTNIKOV DMITRII PETROVICH IP",
     "lang.toggle": "RU",
-    "page.title": "IT Studio Slon — Live in digital!",
-    "page.desc": "Mobile app development for iOS, iPadOS, macOS and Android. IT Studio Slon."
+    "page.title": "IT Studio SLON — Live in digital!",
+    "page.desc": "Mobile app development for iOS, iPadOS, macOS and Android. IT Studio SLON."
   }
 };
 
 // Logo alt text per language (ready for future EN logo)
 const logoAssets = {
   ru: { src: "assets/logo.jpg", alt: "АйТи Студия СЛОН" },
-  en: { src: "assets/logo.jpg", alt: "IT Studio Slon" }
+  en: { src: "assets/logo-en.jpg", alt: "IT Studio SLON" }
   // To add an English logo later, change en.src to "assets/logo-en.jpg"
 };
 
