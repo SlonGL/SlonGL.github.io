@@ -1,4 +1,4 @@
-// ─── Theme ─────────────────────────────────────────────────────────────────
+// ─── Theme ───────────────────────────────────────────────────────────────────
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
@@ -18,7 +18,7 @@ document.getElementById('themeToggle').addEventListener('click', function() {
   applyTheme(current === 'dark' ? 'light' : 'dark');
 });
 
-// ─── Language ───────────────────────────────────────────────────────────────
+// ─── Language ─────────────────────────────────────────���───────────────────────
 
 function detectLang() {
   const saved = localStorage.getItem("slon-lang");
@@ -67,11 +67,18 @@ function applyLang(lang) {
       : 'IT Studio <span style="color:var(--teal)">SLON</span>';
   }
 
-  // logo swap (ready for EN logo)
+  // logo swap — header
   const logoEl = document.getElementById("logoImg");
   if (logoEl && window.logoAssets && window.logoAssets[lang]) {
     logoEl.src = window.logoAssets[lang].src;
     logoEl.alt = window.logoAssets[lang].alt;
+  }
+
+  // logo swap — About section
+  const aboutLogoEl = document.getElementById("aboutLogoImg");
+  if (aboutLogoEl && window.logoAssets && window.logoAssets[lang]) {
+    aboutLogoEl.src = window.logoAssets[lang].src;
+    aboutLogoEl.alt = window.logoAssets[lang].alt;
   }
 }
 
@@ -79,7 +86,7 @@ document.getElementById("langToggle").addEventListener("click", () => {
   applyLang(currentLang === "ru" ? "en" : "ru");
 });
 
-// ─── Mobile menu ────────────────────────────────────────────────────────────
+// ─── Mobile menu ──────────────────────────────────────────────────────────────
 
 const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('siteNav');
@@ -114,14 +121,14 @@ if (menuToggle && nav) {
   });
 }
 
-// ─── Scroll header shadow ────────────────────────────────────────────────────
+// ─── Scroll header shadow ─────────────────────────────────────────────────────
 
 const header = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("header--scrolled", window.scrollY > 20);
 }, { passive: true });
 
-// ─── Intersection reveal ─────────────────────────────────────────────────────
+// ─── Intersection reveal ──────────────────────────────────────────────────────
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -137,7 +144,7 @@ document.querySelectorAll(".card, .value, .about__text, .about__logo-wrap, .cont
   observer.observe(el);
 });
 
-// ─── Smooth scroll for nav links ─────────────────────────────────────────────
+// ─── Smooth scroll for nav links ──────────────────────────────────────────────
 
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener("click", e => {
@@ -149,6 +156,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ─── Init ────────────────────────────────────────────────────────────────────
+// ─── Init ─────────────────────────────────────────────────────────────────────
 
 applyLang(currentLang);
