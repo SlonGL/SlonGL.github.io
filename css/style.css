@@ -130,36 +130,39 @@ img { display: block; max-width: 100%; }
   background: var(--surface);
   color: var(--text-2);
   cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transition), color var(--transition), transform var(--transition), border-color var(--transition);
+  overflow: hidden;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
   flex-shrink: 0;
 }
 .theme-toggle:hover {
   background: var(--bg-alt);
   color: var(--teal);
-  transform: rotate(20deg);
+  border-color: var(--teal);
 }
 .theme-toggle svg {
   width: 18px;
   height: 18px;
   position: absolute;
-  transition: opacity .2s, transform .3s;
+  transition: opacity .25s ease, transform .3s ease;
+  flex-shrink: 0;
 }
-.theme-toggle__sun  { opacity: 0; transform: rotate(90deg) scale(.6); }
+/* Default (light): show moon icon → click to go dark */
+.theme-toggle__sun  { opacity: 0; transform: rotate(90deg) scale(.5); }
 .theme-toggle__moon { opacity: 1; transform: rotate(0deg) scale(1); }
-[data-theme="dark"] .theme-toggle__sun  { opacity: 1; transform: rotate(0deg) scale(1); }
-[data-theme="dark"] .theme-toggle__moon { opacity: 0; transform: rotate(-90deg) scale(.6); }
 
-/* In light mode (explicit or default), show moon to switch to dark */
-[data-theme="light"] .theme-toggle__sun  { opacity: 0; transform: rotate(90deg) scale(.6); }
+/* Dark mode: show sun icon → click to go light */
+[data-theme="dark"] .theme-toggle__sun  { opacity: 1; transform: rotate(0deg) scale(1); }
+[data-theme="dark"] .theme-toggle__moon { opacity: 0; transform: rotate(-90deg) scale(.5); }
+[data-theme="light"] .theme-toggle__sun  { opacity: 0; transform: rotate(90deg) scale(.5); }
 [data-theme="light"] .theme-toggle__moon { opacity: 1; transform: rotate(0deg) scale(1); }
 
-/* OS dark without override: show sun */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .theme-toggle__sun  { opacity: 1; transform: rotate(0deg) scale(1); }
-  :root:not([data-theme="light"]) .theme-toggle__moon { opacity: 0; transform: rotate(-90deg) scale(.6); }
+  :root:not([data-theme="light"]) .theme-toggle__moon { opacity: 0; transform: rotate(-90deg) scale(.5); }
 }
 
 .lang-toggle {
