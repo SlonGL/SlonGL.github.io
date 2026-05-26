@@ -1,4 +1,4 @@
-// ─── Theme ────────────────────────────────────────────────────────────────────
+// ─── Theme ─────────────────────────────────────────────────────────────────
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
@@ -78,6 +78,41 @@ function applyLang(lang) {
 document.getElementById("langToggle").addEventListener("click", () => {
   applyLang(currentLang === "ru" ? "en" : "ru");
 });
+
+// ─── Mobile menu ────────────────────────────────────────────────────────────
+
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('siteNav');
+
+function closeMenu() {
+  if (!nav || !menuToggle) return;
+  nav.classList.remove('nav--open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', function () {
+    const isOpen = nav.classList.toggle('nav--open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!nav.classList.contains('nav--open')) return;
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) {
+      closeMenu();
+    }
+  });
+}
 
 // ─── Scroll header shadow ────────────────────────────────────────────────────
 
