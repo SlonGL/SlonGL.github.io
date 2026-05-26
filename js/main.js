@@ -3,16 +3,18 @@
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('slon-theme', theme);
+  var btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
 }
 
 (function initTheme() {
-  const saved = localStorage.getItem('slon-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var saved = localStorage.getItem('slon-theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   applyTheme(saved || (prefersDark ? 'dark' : 'light'));
 })();
 
 document.getElementById('themeToggle').addEventListener('click', function() {
-  const current = document.documentElement.getAttribute('data-theme');
+  var current = document.documentElement.getAttribute('data-theme');
   applyTheme(current === 'dark' ? 'light' : 'dark');
 });
 
