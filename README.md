@@ -20,7 +20,7 @@ git push -u origin main
 1. Открыть **Settings → Pages** в репозитории
 2. Source: **Deploy from a branch**
 3. Branch: **main**, folder: **/ (root)**
-4. Сохранить — сайт будет доступен по адресу `https://itstudioslon.github.io`
+4. Сохранить — сайт будет доступен по адресу `https://slongl.github.io`
 
 ---
 
