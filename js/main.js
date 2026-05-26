@@ -59,6 +59,14 @@ function applyLang(lang) {
   const footerName = document.getElementById("footerName");
   if (footerName) footerName.textContent = t["footer.name"];
 
+  // brand name in header
+  var brand = document.getElementById('headerBrand');
+  if (brand) {
+    brand.innerHTML = lang === 'ru'
+      ? 'АйТи Студия <span style="color:var(--teal)">СЛОН</span>'
+      : 'IT Studio <span style="color:var(--teal)">SLON</span>';
+  }
+
   // logo swap (ready for EN logo)
   const logoEl = document.getElementById("logoImg");
   if (logoEl && window.logoAssets && window.logoAssets[lang]) {
