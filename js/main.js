@@ -1,3 +1,34 @@
+// ─── Theme ────────────────────────────────────────────────────────────────────
+
+function getSystemTheme() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('slon-theme', theme);
+}
+
+function initTheme() {
+  const saved = localStorage.getItem('slon-theme');
+  applyTheme(saved || getSystemTheme());
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+initTheme();
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+// Sync if OS preference changes and user hasn't manually set
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem('slon-theme')) {
+    applyTheme(e.matches ? 'dark' : 'light');
+  }
+});
+
 // ─── Language ───────────────────────────────────────────────────────────────
 
 function detectLang() {
